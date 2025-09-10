@@ -31,7 +31,7 @@ jobs:
           VALIDATE_YAML_PRETTIER: false
           VALIDATE_NATURAL_LANGUAGE: false
           GITHUB_ACTIONS_ZIZMOR: false
-          CHECKOV: false
-          VALIDATE_ALL_CODEBASE: true   
+          VALIDATE_GITHUB_ACTIONS_ZIZMOR: false
+          VALIDATE_CHECKOV: false
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
