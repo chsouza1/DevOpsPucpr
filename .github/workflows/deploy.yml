@@ -45,4 +45,11 @@ jobs:
 
       - name: Push Docker image
         run: docker push ${{ secrets.DOCKER_USERNAME }}/react-app:latest
-#teste
+
+      - name: Discord notification
+        if: always() 
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        uses: Ilshidur/action-discord@master
+        with:
+          args: "Projeto **${{ github.repository }}** foi deployado pelo GitHub Actions!"
